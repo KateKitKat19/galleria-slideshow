@@ -16,12 +16,13 @@
 // import Arnolfini from '../../assets/arnolfini-portrait/gallery.jpg';
 // import MonaLisa from '../../assets/mona-lisa/gallery.jpg';
 // import TheSwing from '../../assets/the-swing/gallery.jpg';
+import Masonry from 'react-masonry-css';
+
 import Data from '../../data.json';
 
 import {
   Wrapper,
   Image,
-  ListStyled,
   ListItem,
   NameBlock,
   NameStyled,
@@ -29,13 +30,29 @@ import {
   Mask,
 } from './MainGrid.styled';
 export const Grid = () => {
+  const breakpoints = {
+    default: 4,
+    1339: 3,
+    1100: 2,
+    767: 1,
+  };
+
   return (
     <Wrapper>
-      <ListStyled>
+      <Masonry
+        breakpointCols={breakpoints}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column"
+      >
         {Data.map(item => {
           return (
             <ListItem key={item.name}>
               <Image
+                srcSet={`
+              ${require(`../../assets${item.images.thumbnail}`)} 375w,
+              ${require(`../../assets${item.images.thumbnail}`)} 768w,
+              ${require(`../../assets${item.images.hero.large}?`)} 1280w
+            `}
                 src={require(`../../assets${item.images.gallery}`)}
                 alt={item.name}
               ></Image>
@@ -48,7 +65,7 @@ export const Grid = () => {
             </ListItem>
           );
         })}
-      </ListStyled>
+      </Masonry>
     </Wrapper>
   );
 };

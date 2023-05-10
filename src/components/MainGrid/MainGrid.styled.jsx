@@ -14,26 +14,27 @@ export const Image = styled.img`
   display: block;
 `;
 
-export const ListStyled = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  @media screen and (min-width: 768px) {
-    flex-direction: row;
+// export const ListStyled = styled.ul`
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   display: grid;
+//   gap: 24px;
+//   @media screen and (min-width: 768px) {
+//     grid-template-columns: 1fr 1fr;
+//     gap: 40px;
+//   }
+//   @media screen and (min-width: 1440px) {
+//     grid-template-columns: repeat(4, 1fr);
+//     gap: 40px;
+//   }
+// `;
 
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-`;
-
-export const ListItem = styled.li`
+export const ListItem = styled.div`
   width: 100%;
   position: relative;
   @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 40px) / 2);
+    height: fit-content;
   }
 `;
 

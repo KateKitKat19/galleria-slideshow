@@ -9,8 +9,12 @@ export const Wrapper = styled.div`
 `;
 
 export const Image = styled.img`
-  max-width: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
 `;
 
@@ -33,8 +37,21 @@ export const Image = styled.img`
 export const ListItem = styled.div`
   width: 100%;
   position: relative;
+
   @media screen and (min-width: 768px) {
-    height: fit-content;
+    width: 324px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 310px;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    padding-bottom: ${({ aspectRatio }) => aspectRatio}%;
+
+    /* Adjust the padding-bottom value to change the height ratio */
   }
 `;
 

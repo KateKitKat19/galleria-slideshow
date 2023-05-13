@@ -37,6 +37,21 @@ export const Grid = () => {
     767: 1,
   };
 
+  const calculateAspectRatio = (width, height) => {
+    return (height / width) * 100;
+  };
+
+  const getListItemWidth = () => {
+    if (window.innerWidth >= 1440) {
+      return 310; // Width of the ListItem for desktop
+    } else if (window.innerWidth >= 768) {
+      return 324; // Width of the ListItem for tablet
+    } else {
+      return 327; // Default width of the ListItem for mobile
+    }
+  };
+
+  const listItemWidth = getListItemWidth();
   return (
     <Wrapper>
       <Masonry
@@ -45,8 +60,13 @@ export const Grid = () => {
         columnClassName="my-masonry-grid_column"
       >
         {Data.map(item => {
+          const aspectRatio = calculateAspectRatio(
+            listItemWidth, // Width of the ListItem
+            item.height // Height of the image (adjust as per your image object structure)
+          );
+
           return (
-            <ListItem key={item.name}>
+            <ListItem key={item.name} aspectRatio={aspectRatio}>
               <Image
                 srcSet={`
               ${require(`../../assets${item.images.thumbnail}`)} 375w,

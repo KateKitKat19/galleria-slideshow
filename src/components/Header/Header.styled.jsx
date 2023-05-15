@@ -5,7 +5,6 @@ export const Wrap = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  border: 1px solid red;
   padding-bottom: 24px;
   @media screen and (min-width: 768px) {
     padding-bottom: 28px;

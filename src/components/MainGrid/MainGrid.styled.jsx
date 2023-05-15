@@ -3,8 +3,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   width: 100%;
   margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
   @media screen and (min-width: 768px) {
     margin-top: 40px;
+    flex-direction: row;
   }
 `;
 
@@ -18,21 +23,17 @@ export const Image = styled.img`
   display: block;
 `;
 
-// export const ListStyled = styled.ul`
-//   list-style: none;
-//   margin: 0;
-//   padding: 0;
-//   display: grid;
-//   gap: 24px;
-//   @media screen and (min-width: 768px) {
-//     grid-template-columns: 1fr 1fr;
-//     gap: 40px;
-//   }
-//   @media screen and (min-width: 1440px) {
-//     grid-template-columns: repeat(4, 1fr);
-//     gap: 40px;
-//   }
-// `;
+export const ListStyled = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @media screen and (min-width: 768px) {
+    gap: 40px;
+  }
+`;
 
 export const ListItem = styled.div`
   width: 100%;
@@ -57,7 +58,6 @@ export const ListItem = styled.div`
 
 export const NameBlock = styled.div`
   width: 246px;
-  border: 1px solid violet;
   margin-left: 32px;
   margin-bottom: 32px;
   @media screen and (min-width: 1440px) {

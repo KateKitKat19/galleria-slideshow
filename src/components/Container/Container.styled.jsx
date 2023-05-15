@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   max-width: 100%;
   padding: 24px;
-  : 1px solid yellow;
+
   display: flex;
   flex-direction: column;
   @media screen and (min-width: 768px) {

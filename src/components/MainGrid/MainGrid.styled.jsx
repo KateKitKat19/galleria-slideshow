@@ -21,6 +21,7 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: opacity 250ms ease;
 `;
 
 export const ListStyled = styled.ul`
@@ -35,10 +36,14 @@ export const ListStyled = styled.ul`
   }
 `;
 
-export const ListItem = styled.div`
+export const ListItem = styled.li`
   width: 100%;
   position: relative;
-
+  cursor: pointer;
+  &:hover > img,
+  &:focus > img {
+    opacity: 0.5;
+  }
   @media screen and (min-width: 768px) {
     width: 324px;
   }
@@ -46,13 +51,13 @@ export const ListItem = styled.div`
   @media screen and (min-width: 1440px) {
     width: 310px;
   }
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
 
   &::before {
     content: '';
     display: block;
     padding-bottom: ${({ aspectRatio }) => aspectRatio}%;
-
-    /* Adjust the padding-bottom value to change the height ratio */
   }
 `;
 

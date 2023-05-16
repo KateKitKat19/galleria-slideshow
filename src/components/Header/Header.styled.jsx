@@ -23,6 +23,11 @@ export const LogoStyled = styled.img`
     width: 170px;
     height: 48px;
   }
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    filter: opacity 0.5;
+  }
 `;
 
 export const ButtonStart = styled.button`

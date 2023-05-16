@@ -66,11 +66,7 @@ export const Grid = () => {
               );
               return (
                 <>
-                  <ListItem
-                    key={item.name}
-                    aspectRatio={aspectRatio}
-                    onClick={console.log('click!!!')}
-                  >
+                  <ListItem key={item.name} aspectRatio={aspectRatio}>
                     <Image
                       srcSet={`
               ${require(`../../assets${item.images.thumbnail}`)} 375w,

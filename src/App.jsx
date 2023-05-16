@@ -1,12 +1,16 @@
-import { Grid } from 'components/MainGrid/MainGrid';
-import { Container } from 'components/Container/Container.styled';
-import { Header } from 'components/Header/Header';
+import { Routes, Route } from 'react-router-dom';
+import { HeroPage } from 'pages/HeroPage/HeroPage';
+import { DetailedPage } from 'pages/DetailedPage/DetailedPage';
 
 export const App = () => {
   return (
-    <Container>
-      <Header></Header>
-      <Grid></Grid>
-    </Container>
+    <Routes>
+      <Route path="/" element={<HeroPage></HeroPage>}></Route>
+      <Route
+        path="/:paintingId"
+        element={<DetailedPage></DetailedPage>}
+      ></Route>
+      <Route path="*" element={<HeroPage></HeroPage>}></Route>
+    </Routes>
   );
 };

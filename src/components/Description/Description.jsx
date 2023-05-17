@@ -5,7 +5,7 @@ export const Description = ({ painting }) => {
     <Wrap>
       <StyledYear>{painting.year}</StyledYear>
       <Descr>{painting.description}</Descr>
-      <LinkToSource href={`${painting.source}`}> GO TO SOURCE </LinkToSource>
+      <LinkToSource href={`${painting.source}`} target='_blank'> GO TO SOURCE </LinkToSource>
     </Wrap>
   );
 };

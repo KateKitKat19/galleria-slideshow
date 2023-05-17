@@ -4,6 +4,7 @@ import Arrows from './arrows.svg';
 export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 `;
 
 export const ImgWrapper = styled.div`
@@ -24,7 +25,7 @@ export const Button = styled.button`
   background-color: rgba(0, 0, 0, 0.75);
   mix-blend-mode: normal;
   transition: background-color 250ms ease;
-
+  cursor: pointer;
   &:hover,
   &:focus {
     background-color: rgba(255, 255, 255, 0.25);

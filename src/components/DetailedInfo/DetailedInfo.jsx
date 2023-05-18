@@ -8,6 +8,7 @@ import {
   PaintingName,
   ArtistName,
   AuthorImage,
+  Container
 } from './DetailedInfo.styled';
 
 export const DetailedInfo = ({ painting }) => {
@@ -26,16 +27,17 @@ export const DetailedInfo = ({ painting }) => {
           src={`${require(`../../assets${painting.images.hero.small}`)}`}
           alt={painting.name}
         ></Painting>
-        <TextWrap>
-          <PaintingName>{painting.name}</PaintingName>
-          <ArtistName>{painting.artist.name}</ArtistName>
-        </TextWrap>
+        <Container>
+          <TextWrap>
+            <PaintingName>{painting.name}</PaintingName>
+            <ArtistName>{painting.artist.name}</ArtistName>
+          </TextWrap>
+          <AuthorImage
+            src={`${require(`../../assets${painting.artist.image}`)}`}
+            alt={painting.artist.name}
+          ></AuthorImage>
+        </Container>
       </ImgWrapper>
-
-      <AuthorImage
-        src={`${require(`../../assets${painting.artist.image}`)}`}
-        alt={painting.artist.name}
-      ></AuthorImage>
     </Wrap>
   );
 };

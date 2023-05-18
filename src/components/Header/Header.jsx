@@ -1,17 +1,14 @@
-import { useState } from 'react';
 import { Wrap, ButtonStart, LogoStyled } from './Header.styled';
 import Logo from './galleria.svg';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
-export const Header = () => {
-  const [isSlideshowActive, setIsSlideshowActive] = useState(false);
-  console.log('Header   isSlideshowActive:', isSlideshowActive);
+export const Header = ({ isSlideshowActive, setSlideshowState }) => {
   const navigate = useNavigate();
 
   function onClick() {
     isSlideshowActive ? navigate('/') : navigate('/1');
-    setIsSlideshowActive(!isSlideshowActive);
+    setSlideshowState(!isSlideshowActive);
   }
 
   return (

@@ -5,6 +5,10 @@ export const Wrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 24px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    margin-top: 40px;
+  }
 `;
 
 export const ImgWrapper = styled.div`
@@ -44,6 +48,10 @@ export const Button = styled.button`
       fill: white;
     }
   }
+  @media screen and (min-width: 768px) {
+    top: 504px;
+    left: 16px;
+  }
 `;
 
 export const ButtonText = styled.p`
@@ -71,14 +79,32 @@ export const Painting = styled.img`
   }
 `;
 
+export const Container = styled.div`
+  position: absolute;
+  left: 0;
+  bottom: -118px;
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    left: 243px;
+    bottom: auto;
+    display: flex;
+    flex-direction: column;
+  }
+`;
+
 export const TextWrap = styled.div`
   width: 280px;
   padding: 24px;
-  position: absolute;
-  left: 0;
-  bottom: -54px;
 
   background-color: white;
+  @media screen and (min-width: 768px) {
+    width: 445px;
+
+    padding-top: 0;
+    padding-left: 65px;
+    padding-bottom: 67px;
+  }
 `;
 
 export const PaintingName = styled.h2`
@@ -90,6 +116,10 @@ export const PaintingName = styled.h2`
   /* identical to box height, or 121% */
   color: #000000;
   margin-bottom: 8px;
+  @media screen and (min-width: 768px) {
+    font-size: 56px;
+    line-height: 64px;
+  }
 `;
 
 export const ArtistName = styled.h3`
@@ -106,11 +136,11 @@ export const ArtistName = styled.h3`
 export const AuthorImage = styled.img`
   width: 64px;
   height: 64px;
+  margin-left: 16px;
   @media screen and (min-width: 768px) {
     width: 128px;
     height: 128px;
+    margin-left: auto;
+    margin-right: 55px;
   }
-
-  margin-top: 54px;
-  margin-left: 16px;
 `;

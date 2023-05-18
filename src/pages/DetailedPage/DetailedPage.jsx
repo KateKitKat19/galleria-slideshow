@@ -8,7 +8,6 @@ import { Navigation } from 'components/Navigation/Navigation';
 
 export const DetailedPage = () => {
   const [currentPainting, setCurrentPainting] = useState(null);
-  console.log('DetailedPage   currentPainting:', currentPainting);
   const { paintingId } = useParams();
 
   useEffect(() => {

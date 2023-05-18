@@ -8,6 +8,9 @@ export const CommonWrap = styled.div`
   margin-top: 67px;
   padding: 16px 0;
   border-top: 1px solid #e5e5e5;
+  @media screen and (min-width: 768px) {
+    margin-top: 25px;
+  }
 `;
 
 export const Name = styled.p`
@@ -18,6 +21,10 @@ export const Name = styled.p`
   line-height: 17px;
 
   color: #000000;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 `;
 
 export const Artist = styled.p`
@@ -31,6 +38,10 @@ export const Artist = styled.p`
 
   mix-blend-mode: normal;
   opacity: 0.75;
+  @media screen and (min-width: 768px) {
+    font-size: 13px;
+    line-height: 16px;
+  }
 `;
 
 export const BtnNav = styled.button`
@@ -40,6 +51,9 @@ export const BtnNav = styled.button`
   padding: 0;
   &:first-of-type {
     margin-right: 23px;
+    @media screen and (min-width: 768px) {
+      margin-right: 40px;
+    }
   }
   &:disabled > img {
     filter: opacity(0.15);

@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import data from '../../data.json';
 import { makeTabletList } from 'helpers/createTabletMarkup';
 import { makeDesktopList } from 'helpers/createDesktopMarkup';
@@ -13,7 +15,7 @@ import {
   ListStyled,
 } from './MainGrid.styled';
 
-export const Grid = () => {
+export const Grid = ({ setSlideshowState }) => {
   const [mediaWidth, setMediaWidth] = useState('mob');
   const [sortedList, setSortedList] = useState(makeTabletList(data));
 
@@ -53,6 +55,11 @@ export const Grid = () => {
   };
 
   const listItemWidth = getListItemWidth();
+  const navigate = useNavigate();
+  function onImageClick(id) {
+    navigate(`/${id}`);
+    setSlideshowState(true);
+  }
 
   return (
     <Wrapper>
@@ -66,7 +73,11 @@ export const Grid = () => {
               );
               return (
                 <>
-                  <ListItem key={item.name} aspectRatio={aspectRatio}>
+                  <ListItem
+                    key={item.id}
+                    aspectRatio={aspectRatio}
+                    onClick={() => onImageClick(item.id)}
+                  >
                     <Image
                       srcSet={`
               ${require(`../../assets${item.images.thumbnail}`)} 375w,

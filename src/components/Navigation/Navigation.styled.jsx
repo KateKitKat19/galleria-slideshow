@@ -11,6 +11,9 @@ export const CommonWrap = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: 25px;
   }
+  @media screen and (min-width: 768px) {
+    margin-top: 139px;
+  }
 `;
 
 export const Name = styled.p`

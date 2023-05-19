@@ -11,6 +11,7 @@ export const Wrap = styled.div`
   }
   @media screen and (min-width: 1440px) {
     width: 350px;
+    margin-right: 125px;
   }
 `;
 
@@ -23,6 +24,8 @@ export const Descr = styled.p`
   line-height: 28px;
 
   color: #7d7d7d;
+  @media screen and (min-width: 1440px) {
+  }
 `;
 
 export const StyledYear = styled.span`
@@ -49,6 +52,11 @@ export const StyledYear = styled.span`
     top: 0;
     transform: translateY(-50%);
   }
+  @media screen and (min-width: 1440px) {
+    transform: translateY(-75%);
+    right: auto;
+    left: 0;
+  }
 `;
 
 export const LinkToSource = styled.a`
@@ -64,5 +72,8 @@ export const LinkToSource = styled.a`
   color: #7d7d7d;
   @media screen and (min-width: 768px) {
     margin-top: 124px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-top: 81px;
   }
 `;

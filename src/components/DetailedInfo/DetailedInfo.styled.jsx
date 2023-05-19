@@ -8,6 +8,7 @@ export const Wrap = styled.div`
   @media screen and (min-width: 768px) {
     flex-direction: row;
     margin-top: 40px;
+    margin-right: auto;
   }
 `;
 
@@ -85,11 +86,16 @@ export const Container = styled.div`
   bottom: -118px;
 
   @media screen and (min-width: 768px) {
-    top: 0;
+    top: -1px;
     left: 243px;
     bottom: auto;
     display: flex;
     flex-direction: column;
+  }
+
+  @media screen and (min-width: 1440px) {
+    left: auto;
+    right: -380px;
   }
 `;
 
@@ -142,5 +148,9 @@ export const AuthorImage = styled.img`
     height: 128px;
     margin-left: auto;
     margin-right: 55px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-top: 194px;
+    margin-left: 95px;
   }
 `;

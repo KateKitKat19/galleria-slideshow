@@ -5,7 +5,7 @@ import data from '../../data.json';
 import { Description } from 'components/Description/Description';
 import { DetailedInfo } from 'components/DetailedInfo/DetailedInfo';
 import { Navigation } from 'components/Navigation/Navigation';
-
+import { Wrapper } from './DetailedPage.styled';
 export const DetailedPage = () => {
   const [currentPainting, setCurrentPainting] = useState(null);
   const { paintingId } = useParams();
@@ -19,8 +19,10 @@ export const DetailedPage = () => {
     <>
       {currentPainting && (
         <>
-          <DetailedInfo painting={currentPainting}></DetailedInfo>
-          <Description painting={currentPainting}></Description>
+          <Wrapper>
+            <DetailedInfo painting={currentPainting}></DetailedInfo>
+            <Description painting={currentPainting}></Description>
+          </Wrapper>
           <Navigation painting={currentPainting}></Navigation>
         </>
       )}

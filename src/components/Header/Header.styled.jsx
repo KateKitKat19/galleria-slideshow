@@ -4,7 +4,7 @@ export const Wrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  width: 100%;
   padding-bottom: 24px;
   @media screen and (min-width: 768px) {
     padding-bottom: 28px;

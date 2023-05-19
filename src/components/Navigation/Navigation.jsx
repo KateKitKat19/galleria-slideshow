@@ -29,7 +29,7 @@ export const Navigation = ({ painting }) => {
           type="button"
           aria-label="previous slide"
           onClick={openPreviousSlide}
-          disabled={Number(paintingId) === 1}
+          disabled={Number(paintingId) <= 1}
         >
           <Icons src={prevBtn} alt="previous slide" />
         </BtnNav>
@@ -37,7 +37,7 @@ export const Navigation = ({ painting }) => {
           type="button"
           aria-label="next slide"
           onClick={openNextSlide}
-          disabled={Number(paintingId) === 15}
+          disabled={Number(paintingId) >= 15}
         >
           <Icons src={NextBtn} alt="next slide" />
         </BtnNav>

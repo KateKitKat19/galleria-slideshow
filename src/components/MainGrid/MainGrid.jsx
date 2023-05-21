@@ -59,6 +59,7 @@ export const Grid = ({ setSlideshowState }) => {
   function onImageClick(id) {
     navigate(`/${id}`);
     setSlideshowState(true);
+    
   }
 
   return (

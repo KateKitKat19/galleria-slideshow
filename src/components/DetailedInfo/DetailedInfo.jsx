@@ -1,3 +1,6 @@
+import { useState } from 'react';
+import { ModalWindow } from '../Modal/Modal';
+
 import {
   Wrap,
   Button,
@@ -8,14 +11,43 @@ import {
   PaintingName,
   ArtistName,
   AuthorImage,
-  Container
+  Container,
 } from './DetailedInfo.styled';
 
 export const DetailedInfo = ({ painting }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function onEscapeClick(evt) {
+    if (evt.code === 'Escape') {
+      this.setState({ isModalOpen: false });
+      window.removeEventListener('keydown', onEscapeClick);
+    }
+  }
+
+  function onImageClick() {
+    console.log('Image was clicked!!!');
+    setIsModalOpen(true);
+    window.addEventListener('keydown', onEscapeClick);
+  }
+
+  function onBackdropClick(evt) {
+    if (evt.target === evt.currentTarget) {
+      setIsModalOpen(false);
+      window.removeEventListener('keydown', onEscapeClick);
+    }
+  }
+
   return (
     <Wrap>
+      {isModalOpen && (
+        <ModalWindow
+          url={`${require(`../../assets${painting.images.gallery}`)}`}
+          alt={painting.name}
+          onClose={onBackdropClick}
+        ></ModalWindow>
+      )}
       <ImgWrapper>
-        <Button type="button" aria-label="see image">
+        <Button type="button" aria-label="see image" onClick={onImageClick}>
           <ButtonText>View image</ButtonText>
         </Button>
         <Painting

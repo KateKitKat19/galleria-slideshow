@@ -11,8 +11,9 @@ export const CommonWrap = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: 25px;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1440px) {
     margin-top: 139px;
+    max-width: 1360px;
   }
 `;
 

@@ -96,6 +96,8 @@ export const Container = styled.div`
   @media screen and (min-width: 1440px) {
     left: auto;
     right: -380px;
+    height: 624px;
+    justify-content: space-between;
   }
 `;
 

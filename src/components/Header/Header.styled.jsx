@@ -11,6 +11,7 @@ export const Wrap = styled.div`
   }
   @media screen and (min-width: 1440px) {
     padding-bottom: 40px;
+    max-width: 1360px;
   }
 
   border-bottom: 1px solid #e5e5e5;

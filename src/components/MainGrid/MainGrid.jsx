@@ -17,7 +17,7 @@ import {
 
 export const Grid = ({ setSlideshowState }) => {
   const [mediaWidth, setMediaWidth] = useState('mob');
-  const [sortedList, setSortedList] = useState(makeTabletList(data));
+  const [sortedList, setSortedList] = useState(makeDesktopList(data));
 
   useEffect(() => {
     const handleResize = () => {

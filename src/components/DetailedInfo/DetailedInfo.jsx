@@ -19,21 +19,23 @@ export const DetailedInfo = ({ painting }) => {
 
   function onEscapeClick(evt) {
     if (evt.code === 'Escape') {
-      this.setState({ isModalOpen: false });
+      setIsModalOpen(false);
       window.removeEventListener('keydown', onEscapeClick);
+      document.body.classList.remove('disable-scroll');
     }
   }
 
   function onImageClick() {
-    console.log('Image was clicked!!!');
     setIsModalOpen(true);
     window.addEventListener('keydown', onEscapeClick);
+    document.body.classList.add('disable-scroll');
   }
 
   function onBackdropClick(evt) {
     if (evt.target === evt.currentTarget) {
       setIsModalOpen(false);
       window.removeEventListener('keydown', onEscapeClick);
+      document.body.classList.remove('disable-scroll');
     }
   }
 

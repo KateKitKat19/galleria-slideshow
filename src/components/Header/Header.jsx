@@ -8,12 +8,16 @@ export const Header = ({ isSlideshowActive, setSlideshowState }) => {
 
   function onClick() {
     isSlideshowActive ? navigate('/') : navigate('/1');
-    setSlideshowState(!isSlideshowActive);
+    setSlideshowState(prev => !prev);
+  }
+
+  function onLogoClick() {
+    setSlideshowState(false);
   }
 
   return (
     <Wrap>
-      <Link to="/">
+      <Link to="/" onClick={onLogoClick}>
         <LogoStyled src={Logo} alt="logo"></LogoStyled>
       </Link>
 

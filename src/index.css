@@ -8,7 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   max-width: 100vw;
   &.disable-scroll {
-    position: fixed;
     overflow: hidden;
   }
 }

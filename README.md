@@ -1,6 +1,9 @@
 # Galleria slideshow site
 
-This is a solution to the [Galleria slideshow site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
+This is a solution to the
+[Galleria slideshow site challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/galleria-slideshow-site-tEA4pwsa6).
+Frontend Mentor challenges help you improve your coding skills by building
+realistic projects.
 
 ## Table of contents
 
@@ -13,7 +16,7 @@ This is a solution to the [Galleria slideshow site challenge on Frontend Mentor]
 
 ## Overview
 
-Art gallery site with a beautiful layout of paintings
+Art gallery site with a beautiful masonry layout of paintings
 
 ### The challenge
 
@@ -23,9 +26,11 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Navigate the slideshow and view each painting in a lightbox
 
-### Screenshot
+### Screenshots
 
-![](./src/assets/preview.jpg)
+![](./src/assets/Screenshot_1.png) 
+![](./src/assets/Screenshot_2.png)
+![](./src/assets/Screenshot_3.png)
 
 ### Links
 
@@ -37,10 +42,8 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
-

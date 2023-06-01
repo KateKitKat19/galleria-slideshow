@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { nanoid } from 'nanoid';
 
 import data from '../../data.json';
 import { makeTabletList } from 'helpers/createTabletMarkup';
@@ -59,14 +60,13 @@ export const Grid = ({ setSlideshowState }) => {
   function onImageClick(id) {
     navigate(`/${id}`);
     setSlideshowState(true);
-    
   }
 
   return (
     <Wrapper>
       {Object.keys(sortedList).map(keyy => {
         return (
-          <ListStyled key={keyy}>
+          <ListStyled key={nanoid()}>
             {sortedList[keyy].map(item => {
               const aspectRatio = calculateAspectRatio(
                 listItemWidth,
@@ -75,7 +75,7 @@ export const Grid = ({ setSlideshowState }) => {
               return (
                 <>
                   <ListItem
-                    key={item.id}
+                    key={nanoid()}
                     aspectRatio={aspectRatio}
                     onClick={() => onImageClick(item.id)}
                   >
